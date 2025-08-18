@@ -1,0 +1,430 @@
+@font-face {
+    font-family: "Havana";
+    src: url("../font/Havana-Regular.ttf");
+}
+
+* {
+    /* Posicionamento */
+    margin: 0;
+    padding: 0;
+    /* Tipografia */
+    font-family: var(--text-font);
+}
+
+:root {
+    --primary-color: #333483;
+    --secundary-color: #f0e8f4;
+    --tertiary-color: #D99B29;
+    --background-color: #FCFFF9;
+    --background-accent-color: #EBEBF5;
+
+    --icon-background: linear-gradient(135deg, #0A0759, #333483);
+
+    --text-primary-color: #0B0017;
+    --text-secundary-color: #FAFAFA;
+    --text-tertiary-color: #0F0B86;
+    --logo-color: #1C1818;
+
+    --text-font: 'Poppins', 'Arial', sans-serif;
+    --logo-primary-font: 'Parkinsans', 'Arial', sans-serif;
+    --logo-secundary-font: 'Havana', sans-serif;
+}
+
+body {
+    /* Tipografia */
+    color: var(--text-primary-color);
+    /* Estilização */
+    background-color: var(--background-color);
+}
+
+header {
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Posicionamento */
+    padding: 1rem;
+    position: relative;
+
+    /* Estilização */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+h1, h4 {
+    /* Tipografia */
+    font-family: var(--logo-primary-font);
+    font-size: 2rem;
+    color: var(--logo-color);
+    text-transform: lowercase;
+}
+
+h1 span, h4 span {
+    /* Tipografia */
+    font-family: var(--logo-secundary-font);
+    font-size: 2.5rem;
+}
+
+h2 {
+    /* Tipografia */
+    font-size: 2rem;
+}
+
+nav ul {
+    /* Flexbox */
+    display: flex;
+    gap: 2rem;
+    /* Tipografia */
+    text-align: center;
+    /* Estilização */
+    list-style-type: none;
+}
+
+nav a {
+    /* Tipografia */
+    color: var(--text-primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    /* Estilização */
+    border-bottom: solid var(--primary-color);
+}
+
+main {
+    /* Comportamento */
+    overflow: hidden;
+}
+
+.home, .sobre, .contato div{
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    align-items: center;
+    /* Posicionamento */
+    padding: 4rem 2rem;
+}
+
+.home article p, .sobre article p {
+    /* Tipografia */
+    font-size: 1.5rem;
+}
+
+.home img, .sobre img {
+    /* Tamanho */
+    width: 100%;
+}
+
+.home {
+    /* Tipografia */
+    color: var(--text-secundary-color);
+    /* Estilização */
+    background-color: var(--primary-color);
+}
+
+.home article h2 {
+    /* Posicionamento */
+    padding-bottom: .5rem;
+    /* Tipografia */
+    font-size: 2.75rem;
+}
+
+.home article p span {
+    /* Tipografia */
+    font-weight: 600;
+}
+
+.home article a {
+    /* Posicionamento */
+    padding: 1.25rem;
+    margin-top: .75rem;
+    display: inline-block;
+    /* Tipografia */
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    text-align: center;
+    /* Estilização */
+    background-color: var(--tertiary-color);
+    border-radius: 1rem;
+}
+
+.home article a:hover {
+    /* Tipografia */
+    text-decoration: underline;
+}
+
+.sobre article h2 {
+    /* Posicionamento */
+    display: inline-block;
+    margin-bottom: 1rem;
+    /* Estilização */
+    border-bottom: 8px solid var(--primary-color);
+}
+
+.servicos {
+    /* Estilização */
+    background-color: var(--secundary-color);
+}
+
+.servicos h2, .depoimentos h2, .contato h2 {
+    /* Posicionamento */
+    padding-top: 2rem;
+    /* Tipografia */
+    text-align: center;
+}
+
+.servicos ul, .depoimentos div {
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    /* Posicionamento */
+    padding: 2rem 6rem 6rem;
+}
+
+.servicos li, .depoimentos article, .contato form, .contato address {
+    /* Posicionamento */
+    padding: 1.5rem;
+    /* Estilização */
+    border-radius: 1rem;
+    box-shadow: rgba(23, 20, 20, 0.1) 0px 4px 12px;
+}
+
+.servicos li {
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    /* Tipografia */
+    text-align: center;
+    /* Estilização */
+    background-color: var(--background-color);
+}
+
+.servicos li div {
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Tamanho */
+    width: 80px;
+    height: 80px;
+    /* Estilização */
+    background: var(--icon-background);
+    border-radius: 50%;
+}
+
+.servicos li i {
+    /* Tipografia */
+    color: var(--tertiary-color);
+}
+
+.servicos li h3 {
+    /* Tipografia */
+    color: var(--text-tertiary-color);
+    font-size: 1.5rem;
+}
+
+.servicos li p, .depoimentos article p, .contato form input, .contato form textarea, .contato address p, .contato address a {
+    /* Tipografia */
+    font-size: 1.25rem;
+}
+
+.depoimentos article {
+    /* Tipografia */
+    color: var(--text-tertiary-color);
+    /* Estilização */
+    background-color: var(--background-accent-color);
+}
+
+.depoimentos article p {
+    /* Posicionamento */
+    margin-bottom: 1rem;
+}
+
+.depoimentos article cite {
+    /* Tipografia */
+    font-weight: 700;
+}
+
+.contato {
+    /* Estilização */
+    background-color: var(--secundary-color);
+}
+
+.contato div {
+    /* Grid */
+    gap: 2rem;
+}
+
+.contato form {
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    /* Tipografia */
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* Estilização */
+    background-color: var(--background-color);
+}
+
+.contato form h3 {
+    /* Tipografia */
+    font-size: 2rem;
+    color: var(--text-tertiary-color);
+}
+
+.contato form label {
+    /* Posicionamento */
+    padding-top: .75rem;
+}
+
+.contato form input, .contato form textarea, .contato form button {
+    /* Tamanho */
+    width: 100%;
+    /* Posicionamento */
+    padding: .75rem 1.25rem;
+    margin: .25rem 0;
+    /* Tipografia */
+    font-weight: 500;
+    /* Estilização */
+    border-radius: .5rem;
+    border: 1px solid var(--text-primary-color);
+    box-sizing: border-box;
+}
+
+.contato form textarea {
+    /* Tamanho */
+    height: 250px;
+    /* Comportamento */
+    resize: none;
+}
+
+.contato form button {
+    /* Posicionamento */
+    margin-top: 1.5rem;
+    /* Tipografia */
+    color: var(--text-secundary-color);
+    font-size: 1.5rem;
+    /* Estilização */
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.contato form button:hover {
+    /* Tipografia */
+    text-decoration: underline;
+}
+
+.contato address {
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* Tipografia */
+    color: var(--text-secundary-color);
+    /* Estilização */
+    background-color: var(--primary-color);
+}
+
+.contato address span {
+    /* Posicionamento */
+    display: block;
+    /* Tipografia */
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.contato address a {
+    /* Tipografia */
+    text-decoration: none;
+    color: var(--text-secundary-color);
+    /* Estilização */
+    overflow-wrap: break-word;
+}
+
+.contato address a:hover {
+    /* Tipografia */
+    text-decoration: underline;
+}
+
+footer {
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+    /* Estilização */
+    background-color: var(--tertiary-color);
+}
+
+footer h4 {
+    /* Posicionamento */
+    padding-bottom: .5rem;
+}
+
+footer div {
+    /* Posicionamento */
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* Estilização */
+    border-bottom: 1px solid var(--text-primary-color);
+}
+
+footer div > p {
+    /* Tipografia */
+    font-weight: 600;
+}
+
+footer div a {
+    /* Posicionamento */
+    margin-right: .5rem;
+    /* Tipografia */
+    color: var(--text-primary-color);
+    text-decoration: none;
+}
+
+footer div a:hover {
+    /* Tipografia */
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    header {
+        /* Flexbox */
+        flex-direction: column;
+    }
+    nav ul, footer p, footer div a {
+        /* Tipografia */
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        /* Flexbox */
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .servicos ul, .depoimentos div {
+        /* Posicionamento */
+        padding: 2rem .5rem 6rem .5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        /* Flexbox */
+        flex-direction: column;
+    }
+    .home article h2 {
+        /* Tipografia */
+        font-size: 2rem;
+    }
+    .home article p, footer p, footer div a {
+        /* Tipografia */
+        font-size: 1.25rem;
+    }
+}

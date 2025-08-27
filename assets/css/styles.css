@@ -37,7 +37,7 @@ body {
     background-color: var(--background-color);
 }
 
-header {
+.header {
     /* Flexbox */
     display: flex;
     flex-direction: row;
@@ -52,7 +52,7 @@ header {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-h1, h4 {
+.logo {
     /* Tipografia */
     font-family: var(--logo-primary-font);
     font-size: 2rem;
@@ -60,18 +60,13 @@ h1, h4 {
     text-transform: lowercase;
 }
 
-h1 span, h4 span {
+.logo--highlighted {
     /* Tipografia */
     font-family: var(--logo-secundary-font);
     font-size: 2.5rem;
 }
 
-h2 {
-    /* Tipografia */
-    font-size: 2rem;
-}
-
-nav ul {
+.header__nav__list {
     /* Flexbox */
     display: flex;
     gap: 2rem;
@@ -81,14 +76,14 @@ nav ul {
     list-style-type: none;
 }
 
-nav a {
+.header__nav__link {
     /* Tipografia */
     color: var(--text-primary-color);
     font-weight: 600;
     text-decoration: none;
 }
 
-nav a:hover {
+.header__nav__link:hover, .header__nav__link:focus {
     /* Estilização */
     border-bottom: solid var(--primary-color);
 }
@@ -98,7 +93,7 @@ main {
     overflow: hidden;
 }
 
-.home, .sobre, .contato div{
+.section {
     /* Grid */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -107,56 +102,26 @@ main {
     padding: 4rem 2rem;
 }
 
-.home article p, .sobre article p {
-    /* Tipografia */
-    font-size: 1.5rem;
-}
-
-.home img, .sobre img {
-    /* Tamanho */
-    width: 100%;
-}
-
-.home {
+.section--home {
     /* Tipografia */
     color: var(--text-secundary-color);
     /* Estilização */
     background-color: var(--primary-color);
 }
 
-.home article h2 {
+.section__title {
+    /* Tipografia */
+    font-size: 2rem;
+}
+
+.section__title--large {
     /* Posicionamento */
     padding-bottom: .5rem;
     /* Tipografia */
     font-size: 2.75rem;
 }
 
-.home article p span {
-    /* Tipografia */
-    font-weight: 600;
-}
-
-.home article a {
-    /* Posicionamento */
-    padding: 1.25rem;
-    margin-top: .75rem;
-    display: inline-block;
-    /* Tipografia */
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--text-primary-color);
-    text-align: center;
-    /* Estilização */
-    background-color: var(--tertiary-color);
-    border-radius: 1rem;
-}
-
-.home article a:hover {
-    /* Tipografia */
-    text-decoration: underline;
-}
-
-.sobre article h2 {
+.section__title--highlighted {
     /* Posicionamento */
     display: inline-block;
     margin-bottom: 1rem;
@@ -164,19 +129,84 @@ main {
     border-bottom: 8px solid var(--primary-color);
 }
 
-.servicos {
+.section__text {
+    /* Tipografia */
+    font-size: 1.5rem;
+}
+
+.section__text--highlighted {
+    /* Tipografia */
+    font-weight: 600;
+}
+
+.section__text--stylized {
+    /* Posicionamento */
+    display: block;
+    /* Tipografia */
+    font-style: normal;
+    font-weight: 600;
+}
+
+.section__image {
+    /* Tamanho */
+    width: 100%;
+}
+
+.section__link {
+    /* Tipografia */
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.section__link:hover {
+    /* Tipografia */
+    text-decoration: underline;
+}
+
+.section__link--cta {
+    /* Posicionamento */
+    padding: 1.25rem;
+    margin-top: .75rem;
+    display: inline-block;
+    /* Tipografia */
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary-color);
+    text-align: center;
+    /* Estilização */
+    background-color: var(--tertiary-color);
+    border-radius: 1rem;
+}
+
+.section__link--address {
+    /* Tipografia */
+    color: var(--text-secundary-color);
+    /* Estilização */
+    overflow-wrap: break-word;
+}
+
+.section__link--footer {
+    /* Posicionamento */
+    margin-right: .5rem;
+    /* Tipografia */
+    color: var(--text-primary-color);
+    font-size: 1rem;
+}
+
+.cards-section--lightcolor {
     /* Estilização */
     background-color: var(--secundary-color);
 }
 
-.servicos h2, .depoimentos h2, .contato h2 {
+.cards-section__title {
     /* Posicionamento */
     padding-top: 2rem;
     /* Tipografia */
     text-align: center;
+    font-size: 2rem;
 }
 
-.servicos ul, .depoimentos div {
+.cards-section__content {
     /* Grid */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -185,7 +215,7 @@ main {
     padding: 2rem 6rem 6rem;
 }
 
-.servicos li, .depoimentos article, .contato form, .contato address {
+.cards-section__item {
     /* Posicionamento */
     padding: 1.5rem;
     /* Estilização */
@@ -193,7 +223,7 @@ main {
     box-shadow: rgba(23, 20, 20, 0.1) 0px 4px 12px;
 }
 
-.servicos li {
+.cards-section__item--flex {
     /* Flexbox */
     display: flex;
     flex-direction: column;
@@ -205,7 +235,14 @@ main {
     background-color: var(--background-color);
 }
 
-.servicos li div {
+.cards-section__item--highlighted {
+    /* Tipografia */
+    color: var(--text-tertiary-color);
+    /* Estilização */
+    background-color: var(--background-accent-color);
+}
+
+.cards-section__shape {
     /* Flexbox */
     display: flex;
     align-items: center;
@@ -218,50 +255,38 @@ main {
     border-radius: 50%;
 }
 
-.servicos li i {
+.cards-section__icon {
     /* Tipografia */
     color: var(--tertiary-color);
 }
 
-.servicos li h3 {
+.cards-section__item__title {
     /* Tipografia */
     color: var(--text-tertiary-color);
     font-size: 1.5rem;
 }
 
-.servicos li p, .depoimentos article p, .contato form input, .contato form textarea, .contato address p, .contato address a {
+.cards-section__text {
     /* Tipografia */
     font-size: 1.25rem;
 }
 
-.depoimentos article {
-    /* Tipografia */
-    color: var(--text-tertiary-color);
-    /* Estilização */
-    background-color: var(--background-accent-color);
-}
-
-.depoimentos article p {
+.cards-section__text--distant {
     /* Posicionamento */
     margin-bottom: 1rem;
 }
 
-.depoimentos article cite {
+.cards-section__author {
     /* Tipografia */
     font-weight: 700;
 }
 
-.contato {
-    /* Estilização */
-    background-color: var(--secundary-color);
-}
-
-.contato div {
+.section--contact {
     /* Grid */
     gap: 2rem;
 }
 
-.contato form {
+.section__form {
     /* Flexbox */
     display: flex;
     flex-direction: column;
@@ -272,18 +297,17 @@ main {
     background-color: var(--background-color);
 }
 
-.contato form h3 {
+.section__title--form {
     /* Tipografia */
-    font-size: 2rem;
     color: var(--text-tertiary-color);
 }
 
-.contato form label {
+.section__label {
     /* Posicionamento */
     padding-top: .75rem;
 }
 
-.contato form input, .contato form textarea, .contato form button {
+.section__item {
     /* Tamanho */
     width: 100%;
     /* Posicionamento */
@@ -291,36 +315,42 @@ main {
     margin: .25rem 0;
     /* Tipografia */
     font-weight: 500;
+    font-size: 1.25rem;
     /* Estilização */
     border-radius: .5rem;
     border: 1px solid var(--text-primary-color);
     box-sizing: border-box;
 }
 
-.contato form textarea {
+.section__item--textarea {
     /* Tamanho */
     height: 250px;
     /* Comportamento */
     resize: none;
 }
 
-.contato form button {
+.section__item--button {
     /* Posicionamento */
     margin-top: 1.5rem;
     /* Tipografia */
-    color: var(--text-secundary-color);
+    color: var(--primary-color);
     font-size: 1.5rem;
+    font-weight: 700;
     /* Estilização */
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
+    border: 5px solid var(--primary-color);
     cursor: pointer;
 }
 
-.contato form button:hover {
+.section__item--button:hover, .section__item--button:focus {
     /* Tipografia */
-    text-decoration: underline;
+    color: var(--text-secundary-color);
+    /* Estilização */
+    background-color: var(--primary-color);
+    transition: all .3s;
 }
 
-.contato address {
+.section__address {
     /* Flexbox */
     display: flex;
     flex-direction: column;
@@ -331,29 +361,7 @@ main {
     background-color: var(--primary-color);
 }
 
-.contato address span {
-    /* Posicionamento */
-    display: block;
-    /* Tipografia */
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-}
-
-.contato address a {
-    /* Tipografia */
-    text-decoration: none;
-    color: var(--text-secundary-color);
-    /* Estilização */
-    overflow-wrap: break-word;
-}
-
-.contato address a:hover {
-    /* Tipografia */
-    text-decoration: underline;
-}
-
-footer {
+.footer {
     /* Flexbox */
     display: flex;
     flex-direction: column;
@@ -362,12 +370,7 @@ footer {
     background-color: var(--tertiary-color);
 }
 
-footer h4 {
-    /* Posicionamento */
-    padding-bottom: .5rem;
-}
-
-footer div {
+.footer__content {
     /* Posicionamento */
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
@@ -375,56 +378,45 @@ footer div {
     border-bottom: 1px solid var(--text-primary-color);
 }
 
-footer div > p {
+.footer__text {
+    /* Posicionamento */
+    margin-top: 1rem;
     /* Tipografia */
     font-weight: 600;
 }
 
-footer div a {
-    /* Posicionamento */
-    margin-right: .5rem;
-    /* Tipografia */
-    color: var(--text-primary-color);
-    text-decoration: none;
-}
-
-footer div a:hover {
-    /* Tipografia */
-    text-decoration: underline;
-}
-
 @media (max-width: 480px) {
-    header {
+    .header {
         /* Flexbox */
         flex-direction: column;
     }
-    nav ul, footer p, footer div a {
+    .header__nav__list, .footer__text, .section__link--footer {
         /* Tipografia */
         font-size: 1.25rem;
     }
 
-    nav ul {
+    .header__nav__list {
         /* Flexbox */
         flex-direction: column;
         gap: 1rem;
     }
-    .servicos ul, .depoimentos div {
+    .cards-section__content {
         /* Posicionamento */
         padding: 2rem .5rem 6rem .5rem;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    header {
+    .header {
         /* Flexbox */
         flex-direction: column;
     }
-    .home article h2 {
-        /* Tipografia */
-        font-size: 2rem;
-    }
-    .home article p, footer p, footer div a {
+    .section__text, .footer__text, .section__link--footer {
         /* Tipografia */
         font-size: 1.25rem;
+    }
+    .section__link--cta {
+        /* Tipografia */
+        font-size: 1rem;
     }
 }

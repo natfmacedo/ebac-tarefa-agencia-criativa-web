@@ -12,27 +12,27 @@
     <script src="https://kit.fontawesome.com/7394cd901a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Agência Criativa <span>Web</span>.</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+    <header class="header">
+        <h1 class="logo">Agência Criativa <span class="logo logo--highlighted">Web</span>.</h1>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__item"><a class="header__nav__link" href="#home">Home</a></li>
+                <li class="header__nav__item"><a class="header__nav__link" href="#sobre">Sobre nós</a></li>
+                <li class="header__nav__item"><a class="header__nav__link" href="#servicos">Serviços</a></li>
+                <li class="header__nav__item"><a class="header__nav__link" href="#depoimentos">Depoimentos</a></li>
+                <li class="header__nav__item"><a class="header__nav__link" href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home" class="home">
-            <article>
-                <h2>Seja bem-vindo(a)!</h2>
-                <p>Aqui a sua marca ganha vida com <span>criatividade, tecnologia e inovação</span>.</p>
-                <a href="#servicos">Conheça nossos serviços</a>
+        <section id="home" class="section section--home">
+            <article class="section__content">
+                <h2 class="section__title section__title--large">Seja bem-vindo(a)!</h2>
+                <p class="section__text">Aqui a sua marca ganha vida com <span class="section__text section__text--highlighted">criatividade, tecnologia e inovação</span>.</p>
+                <a class="section__link section__link--cta" href="#servicos">Conheça nossos serviços</a>
             </article>
             <div>
-                <img src="assets/img/ilustracao-home-media.png" 
+                <img class="section__image" src="assets/img/ilustracao-home-media.png" 
                 alt="Personagem analisando os dados de uma prancheta. Ilustração." 
                 srcset="assets/img/ilustracao-home-pequena.png 375w,
                         assets/img/ilustracao-home-media.png 750w,
@@ -42,13 +42,13 @@
                 >
             </div>
         </section>
-        <section id="sobre" class="sobre">
-            <article>
-                <h2>Sobre nós</h2>
-                <p>Há 10 anos no mercado, nossa agência é referência na construção de designs digitais que conectam marcas aos seus públicos por meio de experiências visuais inovadoras, funcionais e memoráveis. </p>
+        <section id="sobre" class="section section--about">
+            <article class="section__content">
+                <h2 class="section__title section__title--highlighted">Sobre nós</h2>
+                <p class="section__text">Há 10 anos no mercado, nossa agência é referência na construção de designs digitais que conectam marcas aos seus públicos por meio de experiências visuais inovadoras, funcionais e memoráveis. </p>
             </article>
             <div>
-                <img src="assets/img/ilustracao-sobre-media.png" 
+                <img class="section__image" src="assets/img/ilustracao-sobre-media.png" 
                 alt="Três personagens em uma reunião analisando dados. Ilustração." 
                 srcset="assets/img/ilustracao-sobre-pequena.png 375w,
                         assets/img/ilustracao-sobre-media.png 750w,
@@ -58,102 +58,102 @@
                 >
             </div>
         </section>
-        <section id="servicos" class="servicos">
-            <h2>Serviços</h2>
+        <section id="servicos" class="cards-section cards-section--lightcolor">
+            <h2 class="cards-section__title">Serviços</h2>
 
-            <ul>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-pen-nib fa-2xl"></i>
+            <ul class="cards-section__content">
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-pen-nib fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Design gráfico</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Design gráfico</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-laptop-code fa-2xl"></i>
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-laptop-code fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Desenvolvimento web</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Desenvolvimento web</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-copyright fa-2xl"></i>
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-copyright fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Branding</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Branding</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-comments fa-2xl"></i>
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-comments fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Design de comunicação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Design de comunicação</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-user-check fa-2xl"></i>
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-user-check fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Design de Experiência do Usuário (UX)</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Design de Experiência do Usuário (UX)</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
-                <li>
-                    <div>
-                        <i class="fa-solid fa-magnifying-glass-plus fa-2xl"></i>
+                <li class="cards-section__item cards-section__item--flex">
+                    <div class="cards-section__shape">
+                        <i class="fa-solid fa-magnifying-glass-plus fa-2xl cards-section__icon"></i>
                     </div>
-                    <h3>Otimização de sites (SEO)</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="cards-section__item__title">Otimização de sites (SEO)</h3>
+                    <p class="cards-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </li>
             </ul>
         </section>
-        <section id="depoimentos" class="depoimentos">
-            <h2>Depoimentos</h2>
+        <section id="depoimentos" class="cards-section">
+            <h2 class="cards-section__title">Depoimentos</h2>
 
-            <div>
-                <article>
-                    <p>"A equipe da Agência Criativa Web superou todas as expectativas! O redesign do nosso site trouxe uma estética moderna e intuitiva, refletindo perfeitamente nossos valores sustentáveis. Profissionais ágeis, criativos e comprometidos com cada detalhe."</p>
-                    <cite>Mariana Costa (Fundadora da startup EcoMove)</cite>
+            <div class="cards-section__content">
+                <article class="cards-section__item cards-section__item--highlighted">
+                    <p class="cards-section__text cards-section__text--distant">"A equipe da Agência Criativa Web superou todas as expectativas! O redesign do nosso site trouxe uma estética moderna e intuitiva, refletindo perfeitamente nossos valores sustentáveis. Profissionais ágeis, criativos e comprometidos com cada detalhe."</p>
+                    <cite class="cards-section__author">Mariana Costa (Fundadora da startup EcoMove)</cite>
                 </article>
-                <article>
-                    <p>"Trabalhar com essa equipe foi um divisor de águas para nossa marca. Eles criaram uma identidade visual que se destaca no mercado e conecta com nosso público. Atendimento excelente e entrega pontual!"</p>
-                    <cite>Rafael Tavares (Diretor de Marketing da Livello Café)</cite>
+                <article class="cards-section__item cards-section__item--highlighted">
+                    <p class="cards-section__text cards-section__text--distant">"Trabalhar com essa equipe foi um divisor de águas para nossa marca. Eles criaram uma identidade visual que se destaca no mercado e conecta com nosso público. Atendimento excelente e entrega pontual!"</p>
+                    <cite class="cards-section__author">Rafael Tavares (Diretor de Marketing da Livello Café)</cite>
                 </article>
-                <article>
-                    <p>"Eu precisava de algo único para meu novo projeto, e a Agência Criativa Web entregou exatamente isso. O branding ficou incrível, cheio de personalidade e estilo. Recomendo de olhos fechados!"</p>
-                    <cite>Beatriz Lima (Influenciadora digital)</cite>
+                <article class="cards-section__item cards-section__item--highlighted">
+                    <p class="cards-section__text cards-section__text--distant">"Eu precisava de algo único para meu novo projeto, e a Agência Criativa Web entregou exatamente isso. O branding ficou incrível, cheio de personalidade e estilo. Recomendo de olhos fechados!"</p>
+                    <cite class="cards-section__author">Beatriz Lima (Influenciadora digital)</cite>
                 </article>
             </div>
         </section>
-        <section id="contato" class="contato">
-            <h2>Contato</h2>
-            <div>
-                <form>
-                    <h3>Vamos trabalhar juntos? Nos envie uma mensagem:</h3>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" required>
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail" required>
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" placeholder="Insira sua mensagem" required></textarea>
-                    <button>Enviar</button>
+        <section id="contato" class="cards-section cards-section--lightcolor">
+            <h2 class="cards-section__title">Contato</h2>
+            <div class="section section--contact">
+                <form class="section__form cards-section__item">
+                    <h3 class="section__title section__title--form">Vamos trabalhar juntos? Nos envie uma mensagem:</h3>
+                    <label for="nome" class="section__label">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" class="section__item" required>
+                    <label for="email" class="section__label">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="section__item" required>
+                    <label for="mensagem" class="section__label">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Insira sua mensagem" class="section__item section__item--textarea" required></textarea>
+                    <button class="section__item section__item--button">Enviar</button>
                 </form>
             
-                <address>
-                    <p><span>Endereço:</span>Rua das Artes, 1287 (Sala 304) – Bairro Criativo, São Paulo (SP)</p>
-                    <p><span>Telefone:</span><a href="tel:">(11) 3456-7890</a></p>
-                    <p><span>E-mail:</span><a href="mailto:">contato@acriativaweb.com</a></p>
+                <address class="section__address cards-section__item">
+                    <p class="section__text"><span class="section__text section__text--stylized">Endereço:</span>Rua das Artes, 1287 (Sala 304) – Bairro Criativo, São Paulo (SP)</p>
+                    <p class="section__text"><span class="section__text section__text--stylized">Telefone:</span><a href="tel:" class="section__link section__link--address">(11) 3456-7890</a></p>
+                    <p class="section__text"><span class="section__text section__text--stylized">E-mail:</span><a href="mailto:" class="section__link section__link--address">contato@acriativaweb.com</a></p>
                 </address>
             </div>
         </section>
     </main>
-    <footer>
-        <h4>Agência Criativa <span>Web</span>.</h4>
-        <div>
-            <p>Nossas redes:</p>
-            <i class="fa-brands fa-square-instagram"></i><a href="">Instagram</a>
-            <i class="fa-brands fa-linkedin"></i><a href="">LinkedIn</a>
+    <footer class="footer">
+        <h4 class="logo">Agência Criativa <span class="logo--highlighted">Web</span>.</h4>
+        <div class="footer__content">
+            <p class="footer__text">Nossas redes:</p>
+            <i class="fa-brands fa-square-instagram"></i><a href="" class="section__link section__link--footer">Instagram</a>
+            <i class="fa-brands fa-linkedin"></i><a href="" class="section__link section__link--footer">LinkedIn</a>
         </div>
-        <p>&copy; 2025 Agência Criativa Web - Todos os direitos reservados.</p>
+        <p class="footer__copyright">&copy; 2025 Agência Criativa Web - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
